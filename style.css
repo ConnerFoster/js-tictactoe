@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+
+html,body{width: 100%; height: 100%}
+
+body {background: #1F5369;
+    background: -webkit-linear-gradient(top left, #1F5369, #4B9E51);
+    background: -moz-linear-gradient(top left, #1F5369, #4B9E51);
+    background: linear-gradient(to bottom right, #1F5369, #4B9E51);}
+
+h1 {font-family: 'Chelsea Market', cursive; color: white;}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: 8em 8em 8em;
+    grid-template-rows: 8em 8em 8em;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.squares {
+    background: rgba(233, 230, 230, 0.664);
+    font-size: 3em;
+    padding-top: .5em;
+
+}
+
+.squares:hover {
+    background: lightgrey;
+}
+
+#square1{border-right: 2px solid black; border-bottom: 2px solid black;}
+#square2{border-right: 2px solid black; border-bottom: 2px solid black;}
+#square3{border-bottom: 2px solid black;}
+#square4{border-right: 2px solid black; border-bottom: 2px solid black;}
+#square5{border-right: 2px solid black; border-bottom: 2px solid black;}
+#square6{border-bottom: 2px solid black;}
+#square7{border-right: 2px solid black; }
+#square8{border-right: 2px solid black;}
+#square9{}
+
