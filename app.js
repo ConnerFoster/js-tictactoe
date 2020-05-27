@@ -1,120 +1,142 @@
-let gamestate = ['','','','','','','','',''];
+let gamestate = ["", "", "", "", "", "", "", "", ""];
 
-let currentPlayer = 'X';
+let currentPlayer = "X";
 
 //let ai = true;
 
-const cells = document.querySelectorAll('.cell');
+const cells = document.querySelectorAll(".cell");
 
- cells.forEach(cell => {
-    cell.addEventListener('click', cellClicked);
-})
+cells.forEach((cell) => {
+  cell.addEventListener("click", cellClicked);
+});
 
 function cellClicked(e) {
-    //get the square that was clicked
-    const clickedCell = e.target;
-    
+  //get the square that was clicked
+  const clickedCell = e.target;
 
-    const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
+  const clickedCellIndex = parseInt(
+    clickedCell.getAttribute("data-cell-index")
+  );
 
-    if (currentPlayer === 'O' && gamestate[clickedCellIndex] === '') {
-        clickedCell.style.color = "red"
-    }
-    if(gamestate[clickedCellIndex] !== '') {
-        return;
-    }
-    else {
-        clickedCell.innerHTML = currentPlayer;
-        gamestate[clickedCellIndex] = currentPlayer;
-        handlePlayerSwitch();
-        handleWinner();
-    }
-
-
+  if (currentPlayer === "O" && gamestate[clickedCellIndex] === "") {
+    clickedCell.style.color = "red";
+  }
+  if (gamestate[clickedCellIndex] !== "") {
+    return;
+  } else {
+    clickedCell.innerHTML = currentPlayer;
+    gamestate[clickedCellIndex] = currentPlayer;
+    handlePlayerSwitch();
+    handleWinner();
+  }
 }
 
 function handlePlayerSwitch() {
-    if (currentPlayer === 'X') {
-        currentPlayer = 'O';
-    }
-    else  {
-        currentPlayer = 'X'
-    }
-
+  if (currentPlayer === "X") {
+    currentPlayer = "O";
+  } else {
+    currentPlayer = "X";
+  }
 }
 
 function handleWinner() {
-    if (gamestate[0] === 'X' && gamestate[1]==='X' && gamestate[2] === "X")  {
-        player1Win()
-    }
-    if (gamestate[3] === 'X' && gamestate[4]==='X' && gamestate[5] === "X") {
-        player1Win()
-    }
-    if (gamestate[6] === 'X' && gamestate[7]==='X' && gamestate[8] === "X") {
-        player1Win()
-    }
-    if (gamestate[0] === 'X' && gamestate[3]==='X' && gamestate[6] === "X") {
-        player1Win()
-    }
-    if (gamestate[1] === 'X' && gamestate[4]==='X' && gamestate[7] === "X") {
-        player1Win()
-    }
-    if (gamestate[2] === 'X' && gamestate[5]==='X' && gamestate[8] === "X") {
-        player1Win()
-    }
-    if (gamestate[0] === 'X' && gamestate[4]==='X' && gamestate[8] === "X") {
-        player1Win()
-    }
-    
-    
-    if (gamestate[0] === 'O' && gamestate[1]==='O' && gamestate[2] === "O") {
-        player2Win()
-    }
-    if (gamestate[3] === 'O' && gamestate[4]==='O' && gamestate[5] === "O") {
-        player2Win()
-    }
-    if (gamestate[6] === 'O' && gamestate[7]==='O' && gamestate[8] === "O") {
-        player2Win()
-    }
-    if (gamestate[0] === 'O' && gamestate[3]==='O' && gamestate[6] === "O") {
-        player2Win()
-    }
-    if (gamestate[1] === 'O' && gamestate[4]==='O' && gamestate[7] === "O") {
-        player2Win()
-    }
-    if (gamestate[2] === 'O' && gamestate[5]==='O' && gamestate[8] === "O") {
-        player2Win()
-    }
-    if (gamestate[0] === 'O' && gamestate[4]==='O' && gamestate[8] === "O") {
-        player2Win()
-    }
-    if (gamestate[0] !== '' && gamestate[1] !== '' && gamestate[2] !== '' && gamestate[3] !== '' &&
-            gamestate[4] !== '' && gamestate[5] !== '' && gamestate[6] !== '' && gamestate[7] !== '' &&
-                gamestate[8] !== '') {
-                    draw();
-                }
+    let player1Winner = false;
+    let player2Winner = false;
+  if (gamestate[0] === "X" && gamestate[1] === "X" && gamestate[2] === "X") {
+    player1Win();
+    player1Winner = true;
+  }
+  if (gamestate[3] === "X" && gamestate[4] === "X" && gamestate[5] === "X") {
+    player1Win();
+    player1Winner = true;
+  }
+  if (gamestate[6] === "X" && gamestate[7] === "X" && gamestate[8] === "X") {
+    player1Win();
+    player1Winner = true;
+  }
+  if (gamestate[0] === "X" && gamestate[3] === "X" && gamestate[6] === "X") {
+    player1Win();
+    player1Winner = true;
+  }
+  if (gamestate[1] === "X" && gamestate[4] === "X" && gamestate[7] === "X") {
+    player1Win();
+    player1Winner = true;
+  }
+  if (gamestate[2] === "X" && gamestate[5] === "X" && gamestate[8] === "X") {
+    player1Win();
+    player1Winner = true;
+  }
+  if (gamestate[0] === "X" && gamestate[4] === "X" && gamestate[8] === "X") {
+    player1Win();
+    player1Winner = true;
+  }
+  if (gamestate[6] === "X" && gamestate[4] === "X" && gamestate[2] === "X") {
+      player1Win();
+      player1Winner = true;
+  }
 
-
+  if (gamestate[0] === "O" && gamestate[1] === "O" && gamestate[2] === "O") {
+    player2Win();
+    player2Winner = true;
+  }
+  if (gamestate[3] === "O" && gamestate[4] === "O" && gamestate[5] === "O") {
+    player2Win();
+    player2Winner = true;
+  }
+  if (gamestate[6] === "O" && gamestate[7] === "O" && gamestate[8] === "O") {
+    player2Win();
+    player2Winner = true;
+  }
+  if (gamestate[0] === "O" && gamestate[3] === "O" && gamestate[6] === "O") {
+    player2Win();
+    player2Winner = true;
+  }
+  if (gamestate[1] === "O" && gamestate[4] === "O" && gamestate[7] === "O") {
+    player2Win();
+    player2Winner = true;
+  }
+  if (gamestate[2] === "O" && gamestate[5] === "O" && gamestate[8] === "O") {
+    player2Win();
+    player2Winner = true;
+  }
+  if (gamestate[0] === "O" && gamestate[4] === "O" && gamestate[8] === "O") {
+    player2Win();
+    player2Winner = true;
+  }
+  if (gamestate[6] === "O" && gamestate[4] === "O" && gamestate[2] === "O") {
+    player2Win();
+    player2Winner = true;
 }
 
+  if (!gamestate.includes("") && player1Winner == false && player2Winner == false) {
+      drawMessage();
+  }
+
+}
+  
+
 function player1Win() {
-    document.querySelector('.intro-modal').style.display = "block";
-    document.querySelector('.status').textContent = "Player 1 Wins!"
+  document.querySelector(".intro-modal").style.display = "block";
+  document.querySelector(".status").textContent = "Player 1 Wins!";
 }
 
 function player2Win() {
-    document.querySelector('.intro-modal').style.display = "block";
-    document.querySelector('.status').textContent = "Player 2 Wins!"
+  document.querySelector(".intro-modal").style.display = "block";
+  document.querySelector(".status").textContent = "Player 2 Wins!";
 }
 
-function draw() {
-    document.querySelector('.intro-modal').style.display = "block";
-    document.querySelector('.status').textContent = "Draw!"
+function drawMessage() {
+  document.querySelector(".intro-modal").style.display = "block";
+  document.querySelector(".status").textContent = "Draw!";
 }
 
-document.querySelector('.play-again').addEventListener('click', () => {
-    location.reload();
-})
+document.querySelector(".play-again").addEventListener("click", () => {
+  location.reload();
+});
+
+
+
+
 
 /*function random(min, max) { //random number function 
     return Math.floor(Math.random() * (max - min + 1) + min);
