@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
-html,body{width: 100%; height: 100%}
+html,body{width: 100%; height: 100%; overflow: hidden}
 
 body {background: #1F5369;
     background: -webkit-linear-gradient(top left, #1F5369, #4B9E51);
@@ -18,29 +20,63 @@ h1 {font-family: 'Chelsea Market', cursive; color: white;}
     text-align: center;
 }
 
-.squares {
+.cell {
     background: rgba(233, 230, 230, 0.664);
-    font-size: 3em;
-    padding-top: .5em;
+    font-size: 4em;
+    padding-top: .3em;
+    font-family: 'Permanent Marker', cursive;
 
 }
 
-.squares:hover {
+.cell:hover {
     background: lightgrey;
 }
 
-#square1{border-right: 2px solid black; border-bottom: 2px solid black;}
-#square2{border-right: 2px solid black; border-bottom: 2px solid black;}
-#square3{border-bottom: 2px solid black;}
-#square4{border-right: 2px solid black; border-bottom: 2px solid black;}
-#square5{border-right: 2px solid black; border-bottom: 2px solid black;}
-#square6{border-bottom: 2px solid black;}
-#square7{border-right: 2px solid black; }
-#square8{border-right: 2px solid black;}
-#square9{}
+#cell1{border-right: 2px solid black; border-bottom: 2px solid black;}
+#cell2{border-right: 2px solid black; border-bottom: 2px solid black;}
+#cell3{border-bottom: 2px solid black;}
+#cell4{border-right: 2px solid black; border-bottom: 2px solid black;}
+#cell5{border-right: 2px solid black; border-bottom: 2px solid black;}
+#cell6{border-bottom: 2px solid black;}
+#cell7{border-right: 2px solid black; }
+#cell8{border-right: 2px solid black;}
+#cell9{}
 
 .buttons {
     display: flex;
     justify-content: center;
 }
 
+.intro-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+
+  .intro-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+    /*font-family: 'Oswald', sans-serif;*/
+    font-size: 8em;
+  }
+
+  .intro-buttons {
+      width: 12em;
+      height: 4em;
+  }
+
+  .status {
+    font-family: 'Oswald', sans-serif;
+  }

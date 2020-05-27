@@ -1,73 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
 
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
-      
     <header>
-        <div class="mt-4" style="margin-left: 4em;">
-            <h1>Tic-Tac-Toe</h1>
-        </div>
-      </header>
+      <div class="mt-4" style="margin-left: 4em;">
+        <h1>Tic-Tac-Toe</h1>
+      </div>
+    </header>
 
-      <main>
-       <div class="container pt-5 gameboard">
-        
-        <div id="square1" class="squares">
-            
+    <div class="intro-modal">
+        <div class="intro-modal-content">
+            <h1 class="status" style="color:black"></h1>
+            <button class="btn btn-primary play-again">Play Again</button>
         </div>
-        <div id="square2" class="squares">
-            
-        </div>
-        <div id="square3" class="squares">
-            
-        </div>
-        <div id="square4" class="squares">
-            
-        </div>
-        <div id="square5" class="squares">
-            
-        </div>
-        <div id="square6" class="squares">
-            
-        </div>
-        <div id="square7" class="squares">
-            
-        </div>
-        <div id="square8" class="squares">
-            
-        </div>
-        <div id="square9" class="squares">
-            
-        </div>
-          </div>
+    </div>
 
-          <div class="container mt-5 buttons">
-              <button class="btn btn-outline-light mr-3">Player vs Computer</button>
-              <button class="btn btn-outline-light">Player1 vs Player2</button>
-          </div>
-      </main>
-      <footer>
-          <div class="footer">
-              
-        </div>
-      </footer>
-    
+    <main>
+      <div class="container pt-5 gameboard">
+        <div data-cell-index="0" class="cell" id="cell1"></div>
+        <div data-cell-index="1" class="cell" id="cell2"></div>
+        <div data-cell-index="2" class="cell" id="cell3"></div>
+        <div data-cell-index="3" class="cell" id="cell4"></div>
+        <div data-cell-index="4" class="cell" id="cell5"></div>
+        <div data-cell-index="5" class="cell" id="cell6"></div>
+        <div data-cell-index="6" class="cell" id="cell7"></div>
+        <div data-cell-index="7" class="cell" id="cell8"></div>
+        <div data-cell-index="8" class="cell" id="cell9"></div>
+      </div>
+
+    </main>
+    <footer>
+      <div class="footer"></div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
