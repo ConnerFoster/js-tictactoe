@@ -116,17 +116,17 @@ function handleWinner() {
   
 
 function player1Win() {
-  document.querySelector(".intro-modal").style.display = "block";
+  document.querySelector(".final-modal").style.display = "block";
   document.querySelector(".status").textContent = "Player 1 Wins!";
 }
 
 function player2Win() {
-  document.querySelector(".intro-modal").style.display = "block";
+  document.querySelector(".final-modal").style.display = "block";
   document.querySelector(".status").textContent = "Player 2 Wins!";
 }
 
 function drawMessage() {
-  document.querySelector(".intro-modal").style.display = "block";
+  document.querySelector(".final-modal").style.display = "block";
   document.querySelector(".status").textContent = "Draw!";
 }
 

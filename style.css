@@ -47,7 +47,7 @@ h1 {font-family: 'Chelsea Market', cursive; color: white;}
     justify-content: center;
 }
 
-.intro-modal {
+.final-modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -61,7 +61,7 @@ h1 {font-family: 'Chelsea Market', cursive; color: white;}
     
   }
 
-  .intro-modal-content {
+  .final-modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
